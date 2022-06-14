@@ -1,56 +1,70 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Leaderboard
 
-> Description the project.
+> This is a leaderboard project that shows rankings. 
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- Javascript
+- Webpack Bundler
+<!-- 
+## Live Demo 
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
+[Live Demo Link](https://bobb-rob.github.io/Todo-list-project/) -->
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+> You will need the following on you machine to reproduce this project
+
+- Code editor preferebly Visual Studio Code (VScode).
+- Basic understanding of HTML, CSS Javascript languages
+
 ### Setup
+
+> To clone this repository, please follow the steps below:
+
+#### **Clone Git Repository In GitHub**
+
+- In the File menu, click Clone Repository.
+- Click the tab that corresponds to the location of the repository you want to clone. ...
+- Choose the repository you want to clone from the list.
+- Click Choose... and navigate to a local path where you want to clone the repository.
+- Click Clone.
+
+or
+
+#### **Clone Git Repository In Visual Studio Code**
+
+- Open VSCode and select a folder where to download the Git project to (Ctrl + K wait a second Ctrl + O):
+
+  > Top Menu -> Files -> Open Folder...
+
+- Start the terminal (Ctrl + `):
+
+  > Top Menu -> View-> Terminal
+
+- Execute the git clone command in the terminal:
+  > PS C:\> git clone https://github.com/path/to/repo.git
 
 ### Install
 
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- install VScode if you do not already have it.
+- Sass Compiler VS Code extension.
 
 ## Authors
 
-👤 **Author1**
+### Robertson Akpan
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@bobb-rob](https://github.com/bobb-Rob)
+- Twitter: [@\_\_\_Robertson](https://twitter.com/___Robertson)
+- LinkedIn: https://www.linkedin.com/in/robertson-arthur-6895a0123/
 
 ## 🤝 Contributing
 
@@ -64,9 +78,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Big thank to the micorverse team
 
 ## 📝 License
 
