@@ -16,7 +16,6 @@ main {
 
 .score-section {
     flex-grow: 1;
-    padding: 0.3rem 0.75rem;
     margin-right: 1rem;
 }
 
@@ -27,14 +26,20 @@ main {
 
 .score-wrap {
     border: 2px solid black;
-    padding: 0.3rem;
     margin: 1rem 0;
 }
 
-.score-wrap ul {
+.scores {
     list-style: none;
 }
 
+.scores li {
+    padding: 0.2rem 0.45rem;
+}
+
+.scores>li:nth-child(2n) {
+    background-color: gray;
+}
 
 .add-score-section {
     flex-grow: 1;
