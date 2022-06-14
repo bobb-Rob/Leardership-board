@@ -3,3 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    padding: 1rem 1rem;
+    margin: 0 0 1rem 0;
+}
+
+main {
+    padding: 0 2rem;
+    display: flex;
+}
+
+.score-section {
+    flex-grow: 1;
+    padding: 0.3rem 0.75rem;
+}
+
+.score-section div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-score-section {
+    border: 1px solid rgb(8, 133, 39);
+    flex-grow: 1;
+}
+
+.score-wrap {
+    border: 2px solid black;
+    padding: 0.3rem;
+    margin: 1rem 0;
+}
+
+.score-wrap ul {
+    list-style: none;
+}
