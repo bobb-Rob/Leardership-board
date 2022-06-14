@@ -11,7 +11,7 @@ const addScore = `
         </section>`;
 
 const renderAddScore = () => {
-    app.insertAdjacentHTML("beforeend", addScore)
+  app.insertAdjacentHTML('beforeend', addScore);
 };
 
 export default renderAddScore;

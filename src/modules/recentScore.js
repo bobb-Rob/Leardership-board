@@ -20,7 +20,7 @@ const recentScore = `
         </section>`;
 
 const renderRecentScore = () => {
-    app.insertAdjacentHTML('afterbegin', recentScore)
+  app.insertAdjacentHTML('afterbegin', recentScore);
 };
 
 export default renderRecentScore;

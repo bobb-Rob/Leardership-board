@@ -1,4 +1,3 @@
-
 const app = document.querySelector('body');
 
 const header = `
@@ -7,9 +6,8 @@ const header = `
     </header>
 `;
 
-
 const renderHeader = () => {
-    app.insertAdjacentHTML('afterbegin', header);
-  };
+  app.insertAdjacentHTML('afterbegin', header);
+};
 
-  export default renderHeader;
+export default renderHeader;
