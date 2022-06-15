@@ -4,7 +4,7 @@ const recentScore = `
 <section class="score-section">
             <div>
                 <h3 class="score-header">Recent scores</h3>
-                <button type="button" class="btn">Refresh</button>
+                <button type="button" class="btn btn-refresh">Refresh</button>
             </div>
             <div class="score-wrap">
                 <ul id="scores-board" class="scores">

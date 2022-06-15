@@ -26,13 +26,16 @@ const setScore = async (data, id) => {
     return response.json();
 };
 
+const fetchScore = async (id) => {
+    const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`,{
+        method: 'GET',       
+        headers: {
+            'Content-Type': 'application/json'          
+          },       
+    });
+    return response.json();
+}
 
-// const fetchData = async (baseURL, endpoint) => {
-//     const url = baseURL + endpoint;
-//     const response = await fetch(url);
-// }
 
-
-
-export { createGame, setScore };
+export { createGame, setScore, fetchScore };
 
