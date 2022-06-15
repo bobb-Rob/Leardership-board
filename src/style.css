@@ -31,6 +31,7 @@ header {
 
 .scores {
   list-style: none;
+  min-height: 18.75rem;
 }
 
 .scores li {
@@ -50,6 +51,7 @@ header {
 .add-score-form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .add-score-form h3 {
@@ -83,4 +85,22 @@ header {
   z-index: -1;
   top: 0.1rem;
   left: 0.1rem;
+}
+
+.add-message,
+.empty-message {
+  color: rgb(0, 0, 0);
+  padding: 0.31rem 1rem;
+  position: absolute;
+  top: -2px;
+  left: 140px;
+}
+
+.add-message {
+  background-color: greenyellow;
+}
+
+.empty-message {
+  background-color: rgb(255, 89, 47);
+  color: aliceblue;
 }
