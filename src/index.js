@@ -30,10 +30,10 @@ const clearItems = () => {
   }
 };
 
-const displayAddMessage = (response, addForm) => {
+const displayAddMessage = (addForm, message, classNam) => {
   const span = document.createElement('span');
-  span.className = 'add-message';
-  span.textContent = response.result;
+  span.className = classNam;
+  span.textContent = message;
   addForm.appendChild(span);
   setTimeout(() => span.remove(), 3000);
 };
@@ -42,22 +42,27 @@ const displayAddMessage = (response, addForm) => {
 gameID.then((id) => {
   const refreshBtn = document.querySelector('.btn-refresh');
   const addScoreForm = document.querySelector('.add-score-form');
+
   addScoreForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.querySelector('#name-input');
     const score = document.querySelector('#score-input');
 
-    const newUserScore = {
-      user: name.value,
-      score: score.value,
-    };
-    setScore(newUserScore, id)
-      .then((response) => {
-        displayAddMessage(response, addScoreForm);
-      });
-
-    name.value = '';
-    score.value = '';
+    if (name.value === '' || score.value === '') {
+      const message = 'One or two of the form field cannot be empty';
+      displayAddMessage(addScoreForm, message, 'empty-message');
+    } else {
+      const newUserScore = {
+        user: name.value,
+        score: score.value,
+      };
+      setScore(newUserScore, id)
+        .then((response) => {
+          displayAddMessage(addScoreForm, response.result, 'add-message');
+        });
+      name.value = '';
+      score.value = '';
+    }
   });
 
   refreshBtn.addEventListener('click', () => {

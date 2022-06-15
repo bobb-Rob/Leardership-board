@@ -87,10 +87,20 @@ header {
   left: 0.1rem;
 }
 
-.add-message {
+.add-message,
+.empty-message {
   color: rgb(0, 0, 0);
-  background-color: greenyellow;
+  padding: 0.31rem 1rem;
   position: absolute;
-  top: 3px;
+  top: -2px;
   left: 140px;
+}
+
+.add-message {
+  background-color: greenyellow;
+}
+
+.empty-message {
+  background-color: rgb(255, 89, 47);
+  color: aliceblue;
 }
