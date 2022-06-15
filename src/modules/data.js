@@ -1,6 +1,5 @@
-// Create new game
-const createGame = async (data) => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
+const setScore = async (data, id) => {
+  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -10,19 +9,8 @@ const createGame = async (data) => {
   return response.json();
 };
 
-const setScore = async (data) => {
-  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/mwS97TlFoKbsfoq1MUzG/scores`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
-  return response.json();
-};
-
-const fetchScore = async () => {
-  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/mwS97TlFoKbsfoq1MUzG/scores`, {
+const fetchScore = async (id) => {
+  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -31,4 +19,4 @@ const fetchScore = async () => {
   return response.json();
 };
 
-export { createGame, setScore, fetchScore };
+export { setScore, fetchScore };

@@ -1,21 +1,12 @@
 import renderRecentScore from './modules/recentScore.js';
 import renderAddScore from './modules/addScore.js';
 import './style.css';
-import { createGame, setScore, fetchScore } from './modules/data.js';
+import { setScore, fetchScore } from './modules/data.js';
 
 renderRecentScore();
 renderAddScore();
 
-// const getId = (result) => {
-//   console.log(result)
-//   const arr = result.split(' ');
-//   console.log(arr[3]);
-//   return arr[3];
-// };
-
-// createGame({ name: 'ghost recon' })
-//   .then((data) => getId(data.result));
-
+const gameId = 'mwS97TlFoKbsfoq1MUzG';
 
 const displayScore = (array) => {
   const scoresBoard = document.querySelector('#scores-board');
@@ -58,7 +49,7 @@ addScoreForm.addEventListener('submit', (e) => {
       user: name.value,
       score: score.value,
     };
-    setScore(newUserScore)
+    setScore(newUserScore, gameId)
       .then((response) => {
         displayAddMessage(addScoreForm, response.result, 'add-message');
       });
@@ -68,7 +59,7 @@ addScoreForm.addEventListener('submit', (e) => {
 });
 
 refreshBtn.addEventListener('click', () => {
-  fetchScore().then((response) => {
+  fetchScore(gameId).then((response) => {
     clearItems();
     displayScore(response.result);
   });
