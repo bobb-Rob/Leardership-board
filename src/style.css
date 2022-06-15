@@ -51,6 +51,7 @@ header {
 .add-score-form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .add-score-form h3 {
@@ -84,4 +85,12 @@ header {
   z-index: -1;
   top: 0.1rem;
   left: 0.1rem;
+}
+
+.add-message {
+  color: rgb(0, 0, 0);
+  background-color: greenyellow;
+  position: absolute;
+  top: 3px;
+  left: 140px;
 }

@@ -12,9 +12,7 @@ const getId = (result) => {
 };
 
 const gameID = createGame({ name: 'ghost recon' })
-  .then((data) => {
-   return getId(data.result);
-  });
+  .then((data) => getId(data.result));
 
 const displayScore = (array) => {
   const scoresBoard = document.querySelector('#scores-board');
@@ -32,9 +30,16 @@ const clearItems = () => {
   }
 };
 
+const displayAddMessage = (response, addForm) => {
+  const span = document.createElement('span');
+  span.className = 'add-message';
+  span.textContent = response.result;
+  addForm.appendChild(span);
+  setTimeout(() => span.remove(), 3000);
+};
 
 // Add Score Event
-gameID.then((id) => {  
+gameID.then((id) => {
   const refreshBtn = document.querySelector('.btn-refresh');
   const addScoreForm = document.querySelector('.add-score-form');
   addScoreForm.addEventListener('submit', (e) => {
@@ -45,11 +50,10 @@ gameID.then((id) => {
     const newUserScore = {
       user: name.value,
       score: score.value,
-    };  
+    };
     setScore(newUserScore, id)
       .then((response) => {
-        console.log(response);
-        
+        displayAddMessage(response, addScoreForm);
       });
 
     name.value = '';
