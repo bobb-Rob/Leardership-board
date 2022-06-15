@@ -7,7 +7,7 @@ const recentScore = `
                 <button type="button" class="btn">Refresh</button>
             </div>
             <div class="score-wrap">
-                <ul class="scores">
+                <ul id="scores-board" class="scores">
                     <li>Name: 100</li>
                     <li>Name: 20</li>
                     <li>Name: 50</li>
