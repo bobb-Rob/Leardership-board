@@ -6,13 +6,16 @@ import { createGame, setScore, fetchScore } from './modules/data.js';
 renderRecentScore();
 renderAddScore();
 
-const getId = (result) => {
-  const arr = result.split(' ');
-  return arr[3];
-};
+// const getId = (result) => {
+//   console.log(result)
+//   const arr = result.split(' ');
+//   console.log(arr[3]);
+//   return arr[3];
+// };
 
-const gameID = createGame({ name: 'ghost recon' })
-  .then((data) => getId(data.result));
+// createGame({ name: 'ghost recon' })
+//   .then((data) => getId(data.result));
+
 
 const displayScore = (array) => {
   const scoresBoard = document.querySelector('#scores-board');
@@ -35,40 +38,38 @@ const displayAddMessage = (addForm, message, classNam) => {
   span.className = classNam;
   span.textContent = message;
   addForm.appendChild(span);
-  setTimeout(() => span.remove(), 3000);
+  setTimeout(() => span.remove(), 4000);
 };
 
 // Add Score Event
-gameID.then((id) => {
-  const refreshBtn = document.querySelector('.btn-refresh');
-  const addScoreForm = document.querySelector('.add-score-form');
+const refreshBtn = document.querySelector('.btn-refresh');
+const addScoreForm = document.querySelector('.add-score-form');
 
-  addScoreForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.querySelector('#name-input');
-    const score = document.querySelector('#score-input');
+addScoreForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('#name-input');
+  const score = document.querySelector('#score-input');
 
-    if (name.value === '' || score.value === '') {
-      const message = 'One or two of the form field cannot be empty';
-      displayAddMessage(addScoreForm, message, 'empty-message');
-    } else {
-      const newUserScore = {
-        user: name.value,
-        score: score.value,
-      };
-      setScore(newUserScore, id)
-        .then((response) => {
-          displayAddMessage(addScoreForm, response.result, 'add-message');
-        });
-      name.value = '';
-      score.value = '';
-    }
-  });
+  if (name.value === '' || score.value === '') {
+    const message = 'One or two of the form field cannot be empty';
+    displayAddMessage(addScoreForm, message, 'empty-message');
+  } else {
+    const newUserScore = {
+      user: name.value,
+      score: score.value,
+    };
+    setScore(newUserScore)
+      .then((response) => {
+        displayAddMessage(addScoreForm, response.result, 'add-message');
+      });
+    name.value = '';
+    score.value = '';
+  }
+});
 
-  refreshBtn.addEventListener('click', () => {
-    fetchScore(id).then((response) => {
-      clearItems();
-      displayScore(response.result);
-    });
+refreshBtn.addEventListener('click', () => {
+  fetchScore().then((response) => {
+    clearItems();
+    displayScore(response.result);
   });
 });

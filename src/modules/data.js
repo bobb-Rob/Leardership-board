@@ -10,8 +10,8 @@ const createGame = async (data) => {
   return response.json();
 };
 
-const setScore = async (data, id) => {
-  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`, {
+const setScore = async (data) => {
+  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/mwS97TlFoKbsfoq1MUzG/scores`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -21,8 +21,8 @@ const setScore = async (data, id) => {
   return response.json();
 };
 
-const fetchScore = async (id) => {
-  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`, {
+const fetchScore = async () => {
+  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/mwS97TlFoKbsfoq1MUzG/scores`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
