@@ -2,6 +2,7 @@ import renderRecentScore from './modules/recentScore.js';
 import renderAddScore from './modules/addScore.js';
 import './style.css';
 import './css/recentScore.css';
+import './css/form.css';
 import { setScore, fetchScore } from './modules/data.js';
 
 renderRecentScore();
