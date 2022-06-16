@@ -1,5 +1,6 @@
 import renderRecentScore from './modules/recentScore.js';
 import renderAddScore from './modules/addScore.js';
+import themeEvent from './modules/theme.js';
 import './style.css';
 import './css/recentScore.css';
 import './css/form.css';
@@ -7,6 +8,7 @@ import { setScore, fetchScore } from './modules/data.js';
 
 renderRecentScore();
 renderAddScore();
+themeEvent()
 
 const gameId = 'mwS97TlFoKbsfoq1MUzG';
 
@@ -17,7 +19,7 @@ const displayScore = (array) => {
     liEl.classList.add('player');
     const inEl = `
     <div class="player-image">
-        <span class="iconify" data-icon="mdi:shield-star"></span>
+        <span class="iconify shield" data-icon="mdi:shield-star"></span>
     </div>
     <div class="player-name">
         <h4>${element.user}</h4>

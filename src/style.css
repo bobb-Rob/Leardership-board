@@ -15,11 +15,38 @@
   --lightDeepPurple: #764b8e;
 }
 
+.dark-mode {
+  --dark: #030004;
+  --dark1: #3d1255;
+  --white: #ecf4fa;
+  --orange: #aaaa39;
+  --lightpurple: #ae96bb;
+  --lightLightpurple: #dbcde3;
+  --lightDeepPurple: #764b8e;
+}
+
 .header {
   padding: 1rem 2rem;
   margin: 0 auto 1rem auto;
   background-color: var(--dark);
   color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header button {
+  background-color: var(--dark);
+  outline: none;
+  border: none;
+}
+
+.header button:focus { 
+  outline: auto;  
+}
+
+.theme-icon {
+  color: var(--white);
+  font-size: 20px;
 }
 
 #content {
