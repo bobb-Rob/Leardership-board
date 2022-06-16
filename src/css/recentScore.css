@@ -1,0 +1,47 @@
+
+.score-section {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.score-section div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score-wrap {
+  box-shadow: 0 0 10px -2px #000704;
+  margin: 1rem 0;
+}
+
+.scores {
+  list-style: none;
+  min-height: 18.75rem;
+  background-color: var(--lightLightpurple);
+}
+
+.player {
+  /* border: 1px solid red; */
+  display: flex;
+  padding: 0.2rem 0.45rem;
+  background-color: var(--lightpurple);
+}
+
+.scores > li:nth-child(2n) {
+  background-color: var(--lightDeepPurple);
+}
+
+.iconify {
+  font-size: 25px;
+  color: var(--dark1);
+  margin-right: 10px;
+}
+
+.player-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* border: 1px solid rgb(0, 89, 255); */
+  width: 100%;
+}

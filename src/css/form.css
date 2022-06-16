@@ -1,0 +1,31 @@
+
+.add-score-section {
+  flex-grow: 1;
+  margin-left: 1rem;
+  padding: 0.3rem 0.75rem;
+}
+
+.add-score-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.add-score-form h3 {
+  margin-bottom: 1rem;
+}
+
+.input-el {
+  padding: 0.4rem;
+  color: black;
+  border: 1px solid var(--dark);
+}
+
+.input-el:focus {
+  outline: 1px solid var(--dark1);
+}
+
+.add-score-btn {
+  width: 30%;
+  align-self: flex-end;
+}
