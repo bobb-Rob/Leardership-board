@@ -6,11 +6,9 @@ import './css/recentScore.css';
 import './css/form.css';
 import { setScore, fetchScore } from './modules/data.js';
 
-
 renderRecentScore();
 renderAddScore();
 themeEvent();
-
 
 const gameId = 'mwS97TlFoKbsfoq1MUzG';
 
@@ -74,7 +72,6 @@ addScoreForm.addEventListener('submit', (e) => {
   }
 });
 
-
 refreshBtn.addEventListener('click', () => {
   fetchScore(gameId).then((response) => {
     clearItems();
@@ -83,4 +80,3 @@ refreshBtn.addEventListener('click', () => {
 });
 
 refreshBtn.click();
-

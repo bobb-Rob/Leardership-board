@@ -8,8 +8,8 @@
 :root {
   --dark: #260339;
   --dark1: #3d1255;
-  --black: #000000;
-  --white: #ffffff;
+  --black: #000;
+  --white: #fff;
   --bgWhite: #fff;
   --orange: #dab512;
   --lightpurple: #b49ac2;
@@ -30,7 +30,7 @@
 }
 
 body {
-  background-color: var(--bgWhite); 
+  background-color: var(--bgWhite);
 }
 
 .header {
@@ -70,7 +70,7 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 750px) {  
+@media screen and (max-width: 750px) {
   #content {
     padding: 0 2rem;
     display: flex;
@@ -88,6 +88,10 @@ body {
   position: relative;
   border: none;
   background-color: var(--orange);
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn::after {
