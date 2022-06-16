@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-> This is a leaderboard project that shows rankings. 
+> This is a leaderboard project with the functionality to add and view leaderboard with API call. This project follows GitFlow instead of GitHub flow and it is built with JavaScript, CSS and HTML.
 
 
 ## Built With
