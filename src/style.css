@@ -10,9 +10,9 @@
   --dark1: #3d1255;
   --white: #ecf4fa;
   --orange: #aaaa39;
-  --lightpurple: #ae96bb;
+  --lightpurple: #b49ac2;
   --lightLightpurple: #dbcde3;
-  --lightDeepPurple: #764b8e;
+  --lightDeepPurple: #9e82ae;
 }
 
 .dark-mode {
@@ -34,14 +34,22 @@
   justify-content: space-between;
 }
 
+.trophy {
+  display: flex;
+}
+
+.trophy .iconify {
+  margin-right: 20px;
+}
+
 .header button {
   background-color: var(--dark);
   outline: none;
   border: none;
 }
 
-.header button:focus { 
-  outline: auto;  
+.header button:focus {
+  outline: auto;
 }
 
 .theme-icon {
@@ -54,23 +62,36 @@
   display: flex;
 }
 
+@media screen and (max-width: 750px) {  
+  #content {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .score-section {
+    order: 2;
+    margin-top: 40px;
+  }
+}
+
 .btn {
   padding: 0.2rem;
   position: relative;
-  border: 1.5px solid black;
+  border: none;
   background-color: var(--orange);
 }
 
 .btn::after {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: rgb(119, 119, 119);
   height: 100%;
   width: 100%;
   padding: 0.1rem;
   z-index: -1;
-  top: 0.1rem;
-  left: 0.1rem;
+  top: 0.04rem;
+  left: 0.03rem;
 }
 
 .add-message,

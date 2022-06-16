@@ -6,9 +6,11 @@ import './css/recentScore.css';
 import './css/form.css';
 import { setScore, fetchScore } from './modules/data.js';
 
+
 renderRecentScore();
 renderAddScore();
-themeEvent()
+themeEvent();
+
 
 const gameId = 'mwS97TlFoKbsfoq1MUzG';
 
@@ -23,7 +25,7 @@ const displayScore = (array) => {
     </div>
     <div class="player-name">
         <h4>${element.user}</h4>
-        <span>${element.score}</span>
+        <p>${element.score}</p>
     </div>
     `;
     liEl.insertAdjacentHTML('beforeend', inEl);
@@ -72,9 +74,13 @@ addScoreForm.addEventListener('submit', (e) => {
   }
 });
 
+
 refreshBtn.addEventListener('click', () => {
   fetchScore(gameId).then((response) => {
     clearItems();
     displayScore(response.result);
   });
 });
+
+refreshBtn.click();
+

@@ -10,7 +10,6 @@
 }
 
 .score-wrap {
-  box-shadow: 0 0 10px -2px #000704;
   margin: 1rem 0;
 }
 
@@ -20,8 +19,7 @@
   background-color: var(--lightLightpurple);
 }
 
-.player {
-  /* border: 1px solid red; */
+.player { 
   display: flex;
   padding: 0.2rem 0.45rem;
   background-color: var(--lightpurple);
@@ -40,8 +38,10 @@
 .player-name {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  /* border: 1px solid rgb(0, 89, 255); */
+  align-items: center; 
   width: 100%;
+}
+
+.player-name h4,.player-name p {
+    overflow-wrap: break-word;
 }
