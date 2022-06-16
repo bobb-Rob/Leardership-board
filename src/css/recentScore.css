@@ -20,14 +20,12 @@
   background-color: var(--lightLightpurple);
 }
 
-
 .player {
   /* border: 1px solid red; */
   display: flex;
   padding: 0.2rem 0.45rem;
   background-color: var(--lightpurple);
 }
-
 
 .scores > li:nth-child(2n) {
   background-color: var(--lightDeepPurple);
