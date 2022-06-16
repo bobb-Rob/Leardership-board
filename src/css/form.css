@@ -13,6 +13,7 @@
 
 .add-score-form h3 {
   margin-bottom: 1rem;
+  color: var(--black);
 }
 
 .input-el {

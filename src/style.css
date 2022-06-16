@@ -8,21 +8,29 @@
 :root {
   --dark: #260339;
   --dark1: #3d1255;
-  --white: #ecf4fa;
-  --orange: #aaaa39;
+  --black: #000000;
+  --white: #ffffff;
+  --bgWhite: #fff;
+  --orange: #dab512;
   --lightpurple: #b49ac2;
   --lightLightpurple: #dbcde3;
   --lightDeepPurple: #9e82ae;
 }
 
 .dark-mode {
-  --dark: #030004;
-  --dark1: #3d1255;
-  --white: #ecf4fa;
-  --orange: #aaaa39;
-  --lightpurple: #ae96bb;
-  --lightLightpurple: #dbcde3;
-  --lightDeepPurple: #764b8e;
+  --dark: #09000c;
+  --dark1: #8751a6;
+  --black: #fff;
+  --white: #b49ac2;
+  --bgWhite: #09000c;
+  --orange: #f6df7a;
+  --lightpurple: #141414;
+  --lightLightpurple: #141414;
+  --lightDeepPurple: #09000c;
+}
+
+body {
+  background-color: var(--bgWhite); 
 }
 
 .header {

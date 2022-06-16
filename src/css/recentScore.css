@@ -4,6 +4,10 @@
   margin-right: 1rem;
 }
 
+.score-section h3 {
+    color: var(--black);
+}
+
 .score-section div:first-child {
   display: flex;
   justify-content: space-between;
@@ -17,6 +21,7 @@
   list-style: none;
   min-height: 18.75rem;
   background-color: var(--lightLightpurple);
+  color: var(--black);
 }
 
 .player { 
