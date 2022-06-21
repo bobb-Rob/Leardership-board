@@ -65,7 +65,7 @@ or
 
 - GitHub: [@bobb-rob](https://github.com/bobb-Rob)
 - Twitter: [@\_\_\_Robertson](https://twitter.com/___Robertson)
-- LinkedIn: https://www.linkedin.com/in/robertson-arthur-6895a0123/
+- LinkedIn: [RobertsonAkpan](https://www.linkedin.com/in/robertson-akpan-6895a0123/)
 
 ## 🤝 Contributing
 
